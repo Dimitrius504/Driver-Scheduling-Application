@@ -192,13 +192,10 @@ app.use('/operto', opertoRoutes);
 const uri = `${process.env.MONGO_URI}`
 
 await mongoose.connect(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    ssl: true,
-    tlsAllowInvalidCertificates: false,
-    tlsInsecure: false,
-    tls: true,
-    minVersion: 'TLSv1.2',
+     useNewUrlParser: true,
+  useUnifiedTopology: true,
+  ssl: true,
+  minVersion: 'TLSv1.2'
 });
 
 console.log('Connected to database:', mongoose.connection.name);
