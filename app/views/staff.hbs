@@ -1,0 +1,31 @@
+<h1>Staff List</h1>
+
+<table border="1" cellpadding="8">
+
+    
+  <thead>
+    <tr>
+        <th>Operto ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Roles</th>
+      <th>Zone</th>
+      <th>Staff Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each staff}}
+      <tr>
+        <td>{{this.opertoId}}</td>
+        <td>{{this.name}}</td>
+        <td>{{this.email}}</td>
+        <td>{{this.phone}}</td>
+        <td>{{this.roles}}</td>
+        <td>{{this.teamInfo.zone}}</td>
+        <td><a href="/staff/{{this._id}}">{{this.name}}</a></td>
+
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

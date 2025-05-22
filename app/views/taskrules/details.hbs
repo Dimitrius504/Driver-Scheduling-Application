@@ -1,0 +1,35 @@
+<h2>Task Rule Info</h2>
+
+{{#if rule}}
+<table border="1" cellpadding="6">
+  <tr><th>Name</th><td>{{rule.name}}</td></tr>
+  <tr><th>Abbr</th><td>{{rule.abbreviation}}</td></tr>
+  <tr><th>Category</th><td>{{rule.category}}</td></tr>
+  <tr><th>Department</th><td>{{rule.department}}</td></tr>
+  <tr><th>Task Type</th><td>{{rule.taskType}}</td></tr>
+  <tr><th>Recurring</th><td>{{rule.recurring}}</td></tr>
+  <tr><th>Pack Linen?</th><td>{{rule.packLinen}}</td></tr>
+  <tr><th>Retrieve Linen?</th><td>{{rule.retrieveLinen}}</td></tr>
+  
+  <tr><th>Active?</th><td>{{rule.active}}</td></tr>
+
+</table>
+
+<h3>Related Tasks</h3>
+{{#if relatedTasks.length}}
+  <ul>
+    {{#each relatedTasks}}
+      <li>
+        <a href="/tasks/{{this._id}}">{{this.taskName}}</a> – {{this.date}}
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No related tasks found.</p>
+{{/if}}
+
+{{else}}
+  <p>No Task Rule Found.</p>
+{{/if}}
+
+<a href="/taskrules">← Back to Task Rules</a>

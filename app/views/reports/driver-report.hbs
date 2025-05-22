@@ -1,0 +1,199 @@
+<h1>Driver Reports</h1>
+
+<style>
+    .tab {
+        margin-bottom: 10px;
+        padding: 10px;
+        background: #eee;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 4px;
+    }
+
+    .tab:hover {
+        background: #ddd;
+    }
+
+    .tab-content {
+        display: none;
+        margin-bottom: 30px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .tab-content.active {
+        display: block;
+    }
+
+    .driver-block {
+        margin-bottom: 10px;
+        padding: 5px;
+        background: #f8f8f8;
+        border-left: 3px solid #333;
+    }
+</style>
+
+<script>
+    function toggleTab(id) {
+        const tab = document.getElementById(id);
+        const isActive = tab.classList.contains('active');
+
+        document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+
+        if (!isActive) {
+            tab.classList.add('active');
+        }
+    }
+</script>
+
+<form method="GET" action="/reports/export">
+    <button type="submit">⬇ Export Full Report (CSV)</button>
+</form>
+<div style="margin-bottom: 1rem;">
+    <label>
+        Filter by Zone:
+        <select id="zoneFilter">
+            <option value="">All</option>
+            {{#each zones}}<option value="{{this}}">{{this}}</option>{{/each}}
+        </select>
+    </label>
+
+    <label style="margin-left: 1rem;">
+        Filter by Driver:
+        <select id="driverFilter">
+            <option value="">All</option>
+            {{#each drivers}}<option value="{{this}}">{{this}}</option>{{/each}}
+        </select>
+    </label>
+
+    <button type="button" onclick="applyFilters()" style="margin-left: 1rem;">Apply Filters</button>
+    <button type="button" onclick="saveChanges()" style="margin-left: 1rem;">Save Changes</button>
+</div>
+
+<form method="GET" action="/reports/export" style="margin-bottom: 2rem;">
+    <button type="submit">⬇ Export Full Report (CSV)</button>
+</form>
+
+{{#each schedules}}
+<div class="tab" onclick="toggleTab('week-{{@index}}')">
+    <strong>Week of:</strong> {{formatDate this.weekStart}}
+    <div>
+        <a href="/schedule/driver-reports/{{this._id}}">EDIT</a>
+    </div>
+
+</div>
+
+<div class="tab-content" id="week-{{@index}}">
+    <table id="reportTable-{{@index}}" border="1" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th onclick="sortTable('reportTable-{{@index}}', 0)">Date</th>
+                <th onclick="sortTable('reportTable-{{@index}}', 1)">Time</th>
+                <th onclick="sortTable('reportTable-{{@index}}', 2)">Task</th>
+                <th onclick="sortTable('reportTable-{{@index}}', 3)">Property</th>
+                <th onclick="sortTable('reportTable-{{@index}}', 4)">Zone</th>
+                <th onclick="sortTable('reportTable-{{@index}}', 5)">Driver</th>
+                <th onclick="sortTable('reportTable-{{@index}}', 6)">Reason</th>
+                <th onclick="sortTable('reportTable-{{@index}}', 7)">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each this.daySchedules}}
+            {{#each this.assignments}}
+            <tr class="driver-task-row" data-zone="{{this.taskId.property.zone}}" data-driver="{{this.driverId.name}}">
+                <td>{{formatDate ../this.date}}</td>
+                <td>{{this.taskId.startTime}}</td>
+                <td>
+                    {{#if (includes this.taskId.taskTags 'AutoPickup')}}
+                    🔁 <strong>{{this.taskId.taskName}}</strong>
+                    {{else}}
+                    {{this.taskId.taskName}}
+                    {{/if}}
+                </td>
+                <td>{{this.taskId.property.name}}</td>
+                <td>{{this.taskId.property.zone}}</td>
+                <td>{{this.driverId.name}}</td>
+                <td>{{this.reason}}</td>
+                <td>Assigned</td>
+            </tr>
+            {{/each}}
+
+            {{#each this.unassignedTasks}}
+            <tr class="driver-task-row" data-zone="{{this.property.zone}}" data-driver="">
+                <td>{{formatDate ../this.date}}</td>
+                <td>{{this.startTime}}</td>
+                <td>
+                    {{#if (includes this.taskTags 'AutoPickup')}}
+                    🔁 <strong>{{this.taskName}}</strong>
+                    {{else}}
+                    {{this.taskName}}
+                    {{/if}}
+                </td>
+                <td>{{this.property.name}}</td>
+                <td>{{this.property.zone}}</td>
+                <td>—</td>
+                <td>—</td>
+                <td style="color: red;">Unassigned</td>
+            </tr>
+            {{/each}}
+            {{/each}}
+        </tbody>
+
+    </table>
+</div>
+
+{{/each}}
+
+
+
+<script>
+    const sortState = {};
+
+    function sortTable(tableId, columnIndex) {
+        const table = document.getElementById(tableId);
+        const rows = Array.from(table.rows).slice(1); // skip header
+
+        // Initialize sort direction per table
+        if (!sortState[tableId]) {
+            sortState[tableId] = {};
+        }
+
+        if (!sortState[tableId][columnIndex]) {
+            sortState[tableId][columnIndex] = 1;
+        } else {
+            sortState[tableId][columnIndex] *= -1;
+        }
+
+        const direction = sortState[tableId][columnIndex];
+
+        rows.sort((a, b) => {
+            const cellA = a.cells[columnIndex].textContent.trim().toLowerCase();
+            const cellB = b.cells[columnIndex].textContent.trim().toLowerCase();
+
+            if (!isNaN(Date.parse(cellA)) && !isNaN(Date.parse(cellB))) {
+                return direction * (new Date(cellA) - new Date(cellB));
+            }
+
+            return direction * cellA.localeCompare(cellB);
+        });
+
+        const tbody = table.tBodies[0];
+        rows.forEach(row => tbody.appendChild(row));
+    }
+
+    function applyFilters() {
+        const zoneValue = document.getElementById('zoneFilter').value.toLowerCase();
+        const driverValue = document.getElementById('driverFilter').value.toLowerCase();
+
+        document.querySelectorAll('.driver-task-row').forEach(row => {
+            const rowZone = row.dataset.zone?.toLowerCase() || '';
+            const rowDriver = row.dataset.driver?.toLowerCase() || '';
+
+            const matchesZone = !zoneValue || rowZone === zoneValue;
+            const matchesDriver = !driverValue || rowDriver === driverValue;
+
+            row.style.display = (matchesZone && matchesDriver) ? '' : 'none';
+        });
+    }
+</script>

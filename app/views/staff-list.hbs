@@ -1,0 +1,47 @@
+<h1>Staff List</h1>
+
+<form method="GET" action="/staff" style="margin-bottom: 20px;">
+    <label>Role:
+        <select name="role">
+            <option value="">All</option>
+            {{#each allRoles}}
+              <option value="{{this}}" {{#ifEquals ../selected.role this}}selected{{/ifEquals}}>{{this}}</option>
+            {{/each}}
+        </select>
+    </label>
+
+    <label>Team ID:
+        <select name="teamId">
+            <option value="">All</option>
+            {{#each allTeamIds}}
+              <option value="{{this}}" {{#ifEquals ../selected.teamId this}}selected{{/ifEquals}}>{{this}}</option>
+            {{/each}}
+        </select>
+    </label>
+
+    <label>Name:
+        <input type="text" name="search" value="{{selected.search}}">
+    </label>
+
+    <button type="submit">Filter</button>
+    <a href="/staff">Reset</a>
+</form>
+
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; text-align: left; width: 100%;">
+    <tr>
+        <th>Name</th>
+        <th>Roles</th>
+        <th>Team</th>
+        <th>Zone</th>
+        <th>View</th>
+    </tr>
+    {{#each staff}}
+    <tr>
+        <td>{{this.name}}</td>
+        <td>{{this.roles}}</td>
+        <td>{{this.teamInfo.teamID}}</td>
+        <td>{{this.teamInfo.zone}}</td>
+        <td><a href="/staff/{{this._id}}">View</a></td>
+    </tr>
+    {{/each}}
+</table>

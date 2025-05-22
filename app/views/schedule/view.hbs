@@ -1,0 +1,172 @@
+<h1>Schedule: {{formatDate schedule.weekStart}} to {{formatDate schedule.weekEnd}}</h1>
+
+
+<form method="GET" action="/schedule/driver-reports/{{schedule._id}}/export">
+  <button type="submit"
+    style="margin-bottom: 2rem; background: #0073aa; color: white; padding: 8px 16px; border: none; cursor: pointer;">
+    📥 Download Excel Report
+  </button>
+</form>
+
+<form method="GET" action="/schedule/driver-reports/{{schedule._id}}/export-bundle">
+  <button type="submit">📦 Download Excel + Word (.zip)</button>
+</form>
+
+
+<form method="GET" action="/schedule/driver-reports/{{schedule._id}}/export-driver" style="margin-bottom: 2rem;">
+  <label for="driverId">Generate report for a specific driver:</label>
+  <select name="driverId" required>
+    <option value="">-- Select Driver --</option>
+    {{#each schedule.staff}}
+    <option value="{{this._id}}">{{this.name}}</option>
+    {{/each}}
+  </select>
+  <button type="submit"
+    style="margin-left: 10px; background: #28a745; color: white; padding: 6px 12px; border: none; cursor: pointer;">
+    📥 Download Driver Report
+  </button>
+</form>
+
+
+
+{{#if schedule.conflicts.length}}
+<div style="background: #ffdddd; padding: 1rem; margin-bottom: 1rem;">
+  <h3>⚠️ Conflicts:</h3>
+  <ul>
+    {{#each schedule.conflicts}}
+    <li>{{this}}</li>
+    {{/each}}
+  </ul>
+</div>
+{{/if}}
+
+{{#each schedule.daySchedules}}
+<div style="margin-bottom: 2rem;">
+  <h2>{{formatDate this.date}}</h2>
+
+  {{#if this.assignments.length}}
+  <table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+    <thead style="background: #222; color: white;">
+      <tr>
+        <th>Driver</th>
+        <th>Task Name</th>
+        <th>Property</th>
+        <th>Zone</th>
+        <th>Address</th>
+        <th>Assigned Staff</th>
+        <th>Conflicts</th>
+        <th>Time</th>
+        <th>Reason</th>
+        <th>Pickup/Dropoff</th>
+        <th>Requires Linens</th>
+        <th>Requires Supplies</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each this.assignments}}
+      <tr
+        style="{{#if (conflictsForTask ../../schedule.conflicts (toString this.taskId))}}background-color: #ffdddd;{{/if}}">
+        <form method="POST" action="/schedule/update-or-delete-task">
+          <input type="hidden" name="taskId" value="{{this.taskId}}">
+          <input type="hidden" name="scheduleId" value="{{../../schedule._id}}">
+
+          <td>
+            <select name="driverId">
+              {{#each ../../schedule.staff}}
+              <option value="{{this._id}}" {{#if (eq (toString this._id) ../driverId)}}selected{{/if}}>{{this.name}}
+              </option>
+              {{/each}}
+            </select>
+          </td>
+
+
+
+          <td>{{this.task.taskName}}</td>
+          <td>{{this.task.property.name}}</td>
+          <td>{{this.task.property.zone}}</td>
+          <td>{{this.task.property.address}}</td>
+
+          <td>
+            {{#if this.task.assignedStaff.length}}
+            <ul style="margin: 0; padding-left: 1em;">
+              {{#each this.task.assignedStaff}}
+              <li>{{this.name}}</li>
+              {{/each}}
+            </ul>
+            {{else}}
+            <em>No staff assigned</em>
+            {{/if}}
+          </td>
+
+
+          <td>
+            {{#with (conflictsForTask ../../schedule.conflicts (toString this.taskId)) as |conflictList|}}
+            {{#if conflictList.length}}
+            <ul style="padding-left: 1rem; margin: 0;">
+              {{#each conflictList}}
+              <li style="color: red;">{{this}}</li>
+              {{/each}}
+            </ul>
+            {{else}}
+            <span style="color: #888;">—</span>
+            {{/if}}
+            {{/with}}
+          </td>
+
+          <td>
+            <input type="time" name="startTime" value="{{this.task.startTime}}">
+          </td>
+
+          <td>
+            <input type="text" name="reason" value="{{this.reason}}" placeholder="Optional reason">
+          </td>
+          <td>
+            <select name="pickupDropoff">
+              <option value="">--</option>
+              <option value="Pickup" {{#if (or (eq this.task.pickupDropoff "Pickup" ) (pickupTaskName
+                this.task.taskName))}}selected{{/if}}>Pickup</option>
+              <option value="Drop-off" {{#if (or (eq this.task.pickupDropoff "Drop-off" ) (isDropoffTask
+                this.task))}}selected{{/if}}>Drop-off</option>
+            </select>
+
+          </td>
+
+
+          <td>
+            <select name="requiresLinens">
+              <option value="false" {{#unless this.task.requiresLinens}}selected{{/unless}}>No</option>
+              <option value="true" {{#if this.task.requiresLinens}}selected{{/if}}>Yes</option>
+            </select>
+          </td>
+
+          <td>
+            <select name="requiresSupplies">
+              <option value="false" {{#unless this.task.requiresSupplies}}selected{{/unless}}>No</option>
+              <option value="true" {{#if this.task.requiresSupplies}}selected{{/if}}>Yes</option>
+            </select>
+          </td>
+
+          <td>
+            <button type="submit" name="action" value="save" style="background: #28a745; color: white;">Save</button>
+          </td>
+
+          <td>
+            <button type="submit" name="action" value="delete" style="background: #dc3545; color: white;"
+              onclick="return confirm('Are you sure you want to delete this task?');">Delete</button>
+          </td>
+        </form>
+      </tr>
+      {{/each}}
+    </tbody>
+
+  </table>
+  {{else}}
+  <p>No assignments.</p>
+  {{/if}}
+</div>
+{{/each}}
+
+<a href="/schedule/driver-reports">⬅ Back to all schedules</a>

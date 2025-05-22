@@ -1,0 +1,22 @@
+<h1>Property Details: {{property.name}}</h1>
+
+<table border="1" cellpadding="6">
+  <tr><th>Property</th><td>{{property.name}}</td></tr>
+  <tr><th>Address</th><td>{{property.address}}</td></tr>
+  <tr><th>Zone</th><td>{{property.zone}}</td></tr>
+  <tr><th>Region Group</th><td>{{property.region.regionGroup}}</td></tr>
+  <tr><th>Region Name</th><td>{{property.region.regionName}}</td></tr>
+  <tr><th>Door Code</th><td>{{property.doorCode}}</td></tr>
+  <tr><th>Island?</th><td>{{property.isIsland}}</td></tr>
+  <tr><th>Experience Required</th><td>{{property.minExperienceLevel}}</td></tr>
+
+  <tr><th>Assigned Staff</th>
+    <td>
+      {{#each property.ownerPreferences.preferredTeamMembers}}
+        <a href="/staff/{{this._id}}">{{this.name}}</a>{{#unless @last}}, {{/unless}}
+      {{/each}}
+    </td>
+  </tr>
+</table>
+
+<a href="/properties">← Back to Properties</a>

@@ -1,0 +1,39 @@
+<h1>Properties</h1>
+
+<form method="get">
+  Zone: <select name="zone">
+    <option value="">All</option>
+    {{#each allZones}}<option value="{{this}}" {{#ifEquals ../selected.zone this}}selected{{/ifEquals}}>{{this}}</option>{{/each}}
+  </select>
+
+  Region Group: <select name="regionGroup">
+    <option value="">All</option>
+    {{#each allRegionGroups}}<option value="{{this}}" {{#ifEquals ../selected.regionGroup this}}selected{{/ifEquals}}>{{this}}</option>{{/each}}
+  </select>
+
+  <label><input type="checkbox" name="isIsland" value="true" {{#if selected.isIsland}}checked{{/if}}> Island Only</label>
+  <label><input type="checkbox" name="hasRecurringTasks" value="true" {{#if selected.hasRecurringTasks}}checked{{/if}}> Recurring Tasks</label>
+
+  <button type="submit">Filter</button>
+</form>
+
+<table border="1" cellpadding="6">
+  <tr>
+    <th>Property</th>
+    <th>Zone</th>
+    <th>Region</th>
+    <th>Distance (km)</th>
+    <th>Island?</th>
+    <th>Has Recurring Tasks?</th>
+  </tr>
+  {{#each properties}}
+    <tr>
+      <td><a href="/properties/{{_id}}">{{name}}</a></td>
+      <td>{{zone}}</td>
+      <td>{{region.regionName}}</td>
+      <td>{{distanceFromOffice}}</td>
+      <td>{{#if isIsland}}Yes{{else}}No{{/if}}</td>
+      <td>{{#if hasRecurringTasks}}Yes{{else}}No{{/if}}</td>
+    </tr>
+  {{/each}}
+</table>

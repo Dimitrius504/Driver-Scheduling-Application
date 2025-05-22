@@ -1,0 +1,32 @@
+<h1>📊 Dashboard</h1>
+
+<button id="syncBtn">🔁 Run Operto + Mongo Sync</button>
+
+<div id="progressBar" style="display: none; margin-top: 10px;">
+  <p id="progressText">Initializing...</p>
+</div>
+
+<script>
+  document.getElementById('syncBtn').addEventListener('click', async () => {
+    const progressBar = document.getElementById('progressBar');
+    const progressText = document.getElementById('progressText');
+    const button = document.getElementById('syncBtn');
+
+    progressBar.style.display = 'block';
+    progressText.textContent = '🔄 Running sync...';
+    button.disabled = true;
+
+    try {
+      const res = await fetch('/operto/sync', { method: 'POST' });
+      if (!res.ok) throw new Error('Sync failed');
+
+      progressText.textContent = '✅ Sync completed successfully!';
+      progressText.style.color = 'green';
+    } catch (err) {
+      progressText.textContent = '❌ Sync failed';
+      progressText.style.color = 'red';
+    }
+
+    button.disabled = false;
+  });
+</script>

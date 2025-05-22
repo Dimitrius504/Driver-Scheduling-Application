@@ -1,0 +1,66 @@
+<h1>Task Rules</h1>
+
+<form method="get">
+  Department:
+  <select name="department">
+    <option value="">All</option>
+    {{#each allDepartments}}
+      <option value="{{this}}" {{#ifEquals ../selected.department this}}selected{{/ifEquals}}>{{this}}</option>
+    {{/each}}
+  </select>
+
+  Category:
+  <select name="category">
+    <option value="">All</option>
+    {{#each allCategories}}
+      <option value="{{this}}" {{#ifEquals ../selected.category this}}selected{{/ifEquals}}>{{this}}</option>
+    {{/each}}
+  </select>
+
+  Sort By:
+  <select name="sort">
+    <option value="">Default</option>
+    <option value="name-asc">Name (A-Z)</option>
+    <option value="name-desc">Name (Z-A)</option>
+    <option value="time-asc">Min Time (Low)</option>
+    <option value="time-desc">Min Time (High)</option>
+  </select>
+
+  <button type="submit">Apply</button>
+</form>
+
+<table border="1" cellpadding="6">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Abbreviation</th>
+      <th>Active?</th>
+      <th>Department</th>
+      <th>Task Type</th>
+      <th>Min / Max Time</th>
+      <th>Recurring?</th>
+      <th>Pack Linen?</th>
+      <th>Retrieve Linen?</th>
+      <th>Category</th>
+      <th>View</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each rules}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>{{this.abbreviation}}</td>
+      <td>{{this.active}}</td>
+      <td>{{this.department}}</td>
+      <td>{{this.taskType}}</td>
+      <td>{{this.minTime}} - {{this.maxTime}}</td>
+      <td>{{this.recurring}}</td>
+      <td>{{this.packLinen}}</td>
+      <td>{{this.retrieveLinen}}</td>
+      <td>{{this.category}}</td>
+
+      <td><a href="/taskrules/{{this._id}}">View</a></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

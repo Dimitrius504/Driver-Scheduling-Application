@@ -1,0 +1,40 @@
+<h1>Staff Info: {{staff.name}}</h1>
+
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; text-align: left; width: 100%;">
+    <tr><th style="background-color: #f2f2f2;">Email</th><td>{{staff.email}}</td></tr>
+    <tr><th style="background-color: #f2f2f2;">Phone</th><td>{{staff.phone}}</td></tr>
+    <tr><th style="background-color: #f2f2f2;">Active</th><td>{{staff.isActive}}</td></tr>
+    <tr><th style="background-color: #f2f2f2;">Roles</th><td>{{#each staff.roles}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</td></tr>
+    <tr><th style="background-color: #f2f2f2;">Vehicle</th><td>{{staff.vehicle}}</td></tr>
+    <tr><th style="background-color: #f2f2f2;">Zone</th><td>{{staff.teamInfo.zone}}</td></tr>
+    <tr><th style="background-color: #f2f2f2;">Team Role</th><td>{{staff.teamInfo.teamRole}}</td></tr>
+    <tr><th style="background-color: #f2f2f2;">Comments</th><td>{{staff.additionalInfo.comments}}</td></tr>
+        <td>{{staff.opertoId}}</td>
+
+</table>
+
+<h2>Team Members</h2>
+{{#if teamMembers.length}}
+  <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; text-align: left;">
+    <tr><th>Name</th></tr>
+    {{#each teamMembers}}
+      <tr><td><a href="/staff/{{this._id}}">{{this.name}}</a></td></tr>
+    {{/each}}
+  </table>
+{{else}}
+  <p>No team members.</p>
+{{/if}}
+
+<h2>Can't Work With</h2>
+{{#if cantWorkWith.length}}
+  <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; text-align: left;">
+    <tr><th>Name</th></tr>
+    {{#each cantWorkWith}}
+      <tr><td><a href="/staff/{{this._id}}">{{this.name}}</a></td></tr>
+    {{/each}}
+  </table>
+{{else}}
+  <p>No restrictions.</p>
+{{/if}}
+
+<a href="/staff">← Back to Staff List</a>

@@ -1,0 +1,300 @@
+<h1>Driver Schedule</h1>
+
+<form method="get" action="/schedule/driver-schedule" style="margin-bottom: 20px;">
+    Week Starting:
+    <input type="date" name="week" value="{{selected.week}}">
+    <button type="submit">Generate Schedule</button>
+</form>
+
+<div style="display: flex; gap: 20px; margin-bottom: 20px;">
+    <form method="POST" action="/schedule/sort-tasks">
+        <input type="hidden" name="week" value="{{selected.week}}">
+        <button type="submit"
+            style="padding: 8px 16px; background: #0073aa; color: white; border: none; cursor: pointer;">
+            🚚 Optimize Driver Routes
+        </button>
+    </form>
+
+    <form method="POST" action="/schedule/save-sorted-schedule">
+        <input type="hidden" name="week" value="{{selected.week}}">
+        <input type="hidden" value="">
+        <input type="hidden" id="serializedAssignments" name="assignmentsJson">
+        <button type="submit"
+            style="padding: 8px 16px; background: #28a745; color: white; border: none; cursor: pointer;">
+            💾 Save Schedule
+        </button>
+    </form>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector('form[action="/schedule/save-sorted-schedule"]');
+        const hiddenInput = document.getElementById('serializedAssignments');
+
+        if (!form || !hiddenInput) {
+            console.warn("❌ Form or hidden input not found.");
+            return;
+        }
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const rows = document.querySelectorAll('tr[data-task-id]');
+            const assignments = [];
+
+            rows.forEach(row => {
+                const taskId = row.getAttribute("data-task-id");
+                const select = row.querySelector('select[name="driverId"]');
+                const driverId = select?.value;
+
+                if (taskId && driverId) {
+                    assignments.push({ taskId, driverId });
+                }
+            });
+
+            if (assignments.length === 0) {
+                alert("No assignments were collected. Check if drivers were selected.");
+                return;
+            }
+
+            hiddenInput.value = JSON.stringify(assignments);
+            form.submit();
+        });
+    });
+</script>
+
+
+{{#if schedule}}
+
+<h2>Driver Assignments</h2>
+
+{{#if schedule.assignments.length}}
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+    <thead style="background: #333; color: white;">
+        <tr>
+            <th>Driver</th>
+            <th>Zone</th>
+            <th>Date</th>
+            <th>Task</th>
+            <th>Property</th>
+            <th>Time</th>
+            <th>Reason for Move?</th>
+            <th>Conflicts</th>
+            <th>Assigned Staff</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {{#each schedule.assignments}}
+        <tr style="background: #111; color: white;">
+            <td colspan="8"><strong>{{this.driver.name}}</strong></td>
+            {{#each ../this.assignedStaff}}
+            {{#if this.name}}
+            {{this.name}}<br>
+            {{else}}
+            <span style="color:red;">[Missing]</span><br>
+            {{/if}}
+            {{/each}}
+
+
+            {{#each this.tasksByZone}}
+        <tr style="background: #444; color: white;">
+            <td colspan="8">Zone: {{@key}}</td>
+        </tr>
+
+        {{#each this}}
+        <tr data-task-id="{{this._id}}" data-driver-id="{{this.driver._id}}">
+
+
+            <td>
+                <form method="POST" action="/schedule/update-driver">
+                    <input type="hidden" name="taskId" value="{{this._id}}">
+                    <input type="hidden" name="week" value="{{../../../selected.week}}">
+                    <select name="driverId" onchange="this.form.submit()">
+                        <option value="">-- Select Driver --</option>
+                        {{#each ../../../schedule.drivers}}
+                        <option value="{{this._id}}" {{#if (eq (toString this._id) (toString
+                            ../../../driver._id))}}selected{{/if}}>
+                            {{this.name}}
+                        </option>
+                        {{/each}}
+                    </select>
+
+                </form>
+
+                <form method="POST" action="/schedule/remove-driver" style="margin-top: 4px;">
+                    <input type="hidden" name="taskId" value="{{this._id}}">
+                    <input type="hidden" name="driverId" value="{{../driver._id}}">
+                    <input type="hidden" name="week" value="{{../../../selected.week}}">
+                    <button type="submit">Remove</button>
+                </form>
+            </td>
+
+            <td>{{this.property.zone}}</td>
+            <td>{{this.date}}</td>
+            <td>{{this.taskName}}</td>
+            <td>{{this.property.name}}</td>
+            <td>{{this.startTime}}</td>
+            <td>
+                {{#if this.driverAssignmentReason}}
+                <span style="color: #1134ff;">{{this.driverAssignmentReason}}</span>
+                {{else}}<span style="color: #aaa;">—</span>{{/if}}
+            </td>
+            <td>
+                {{#with (conflictsForTask ../../../schedule.conflicts (toString this._id)) as |conflictList|}}
+                {{#if conflictList.length}}
+                {{#each conflictList}}
+                <div style="color: red; font-weight: bold;">{{this}}</div>
+                {{/each}}
+                {{else}}
+                <span style="color: #aaa;">—</span>
+                {{/if}}
+                {{/with}}
+            <td>
+                {{#each this.assignedStaff}}
+                {{#with (lookup ../../../../schedule.staffMap (toString this)) as |staff|}}
+                {{#if staff.name}}
+                {{staff.name}}<br>
+                {{else}}
+                <span style="color:red;">[Missing]</span><br>
+                {{/if}}
+                {{/with}}
+                {{/each}}
+            </td>
+
+            </td>
+        </tr>
+        {{/each}}
+        {{/each}}
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<p>No drivers found.</p>
+{{/if}}
+
+<hr>
+<h2>All Staff Assignments</h2>
+
+{{#if schedule.staffAssignments.length}}
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+    <thead style="background: #333; color: white;">
+        <tr>
+            <th>Staff</th>
+            <th>Date</th>
+            <th>Task</th>
+            <th>Property</th>
+            <th>Time</th>
+            <th>Task Type</th>
+            <th>Task Zone</th>
+            <th>Driver Reason</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each schedule.staffAssignments}}
+        {{#each this.tasksByDate}}
+        {{#each this}}
+        <tr>
+            <td>
+                {{#each this.assignedStaff}}
+                {{#with (lookup ../../../../schedule.staffMap (toString this)) as |staff|}}
+                {{#if staff.name}}{{else}}<span style="color:red;">[Missing]</span>{{/if}}<br>
+
+                {{/with}}
+                {{/each}}
+
+                <form method="POST" action="/schedule/assign-driver" style="margin-top: 5px;">
+                    <input type="hidden" name="taskId" value="{{this._id}}">
+                    <input type="hidden" name="week" value="{{../../../selected.week}}">
+                    <select name="driverId">
+                        {{#each ../../../schedule.drivers}}
+                        <option value="{{this._id}}">{{this.name}}</option>
+                        {{/each}}
+                    </select>
+                    <select name="reason">
+                        <option value="">-- Reason --</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Drop-off">Drop-off</option>
+                        <option value="Supply Delivery">Supply Delivery</option>
+                        <option value="Linen Run">Linen Run</option>
+                        <option value="Manual Override">Manual Override</option>
+                    </select>
+                    <button type="submit">Assign</button>
+                </form>
+            </td>
+            <td>{{@../key}}</td>
+            <td>{{this.taskName}}</td>
+            <td>{{this.property.name}}</td>
+            <td>{{this.startTime}}</td>
+            <td>{{this.taskType}}</td>
+            <td>{{this.property.zone}}</td>
+            <td>
+                {{#if this.driverAssignmentReason}}
+                <span style="color: #1134ff;">{{this.driverAssignmentReason}}</span>
+                {{else}}<span style="color: #aaa;">—</span>{{/if}}
+            </td>
+        </tr>
+        {{/each}}
+        {{/each}}
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<p>No staff assignments found.</p>
+{{/if}}
+
+<hr>
+<h2>Unassigned Tasks</h2>
+
+{{#if schedule.unassignedByDate}}
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+    <thead style="background: #333; color: white;">
+        <tr>
+            <th>Date</th>
+            <th>Task</th>
+            <th>Property</th>
+            <th>Time</th>
+            <th>Assign Driver</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each schedule.unassignedByDate}}
+        {{#each this}}
+        <tr>
+            <td>{{@../key}}</td>
+            <td>{{this.taskName}}</td>
+            <td>{{this.property.name}}</td>
+            <td>{{this.startTime}}</td>
+            <td>
+                <form method="POST" action="/schedule/assign-driver">
+                    <input type="hidden" name="taskId" value="{{this._id}}">
+                    <input type="hidden" name="week" value="{{../../selected.week}}">
+                    <select name="driverId" required>
+                        <option value="">Assign Driver</option>
+                        {{#each ../../schedule.drivers}}
+                        <option value="{{this._id}}">{{this.name}}</option>
+                        {{/each}}
+                    </select>
+                    <select name="reason" required>
+                        <option value="">-- Reason --</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="Drop-off">Drop-off</option>
+                        <option value="Supply Delivery">Supply Delivery</option>
+                        <option value="Linen Run">Linen Run</option>
+                        <option value="Manual Override">Manual Override</option>
+                    </select>
+                    <button type="submit">Assign</button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<p>No unassigned tasks.</p>
+{{/if}}
+
+{{else}}
+<p>No schedule data found.</p>
+{{/if}}

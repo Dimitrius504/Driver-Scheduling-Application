@@ -1,0 +1,63 @@
+<h1>All Tasks</h1>
+<form method="get">
+    Week: <input type="date" name="week" value="{{selected.week}}">
+    Day: <input type="date" name="date" value="{{selected.date}}">
+    Property: <input type="text" name="property" value="{{selected.property}}">
+    Zone: <input type="text" name="zone" value="{{selected.zone}}">
+
+    <label><input type="checkbox" name="unassigned" value="true" {{#if selected.unassigned}}checked{{/if}}>
+        Unassigned</label>
+    <label><input type="checkbox" name="completed" value="true" {{#if selected.completed}}checked{{/if}}>
+        Completed</label>
+    <label><input type="checkbox" name="isIsland" value="true" {{#if selected.isIsland}}checked{{/if}}> Island
+        Task</label>
+    <label><input type="checkbox" name="upcoming" value="true" {{#if selected.upcoming}}checked{{/if}}> Upcoming</label>
+
+    Sort by:
+    <select name="sort">
+        <option value="">Default</option>
+        <option value="time-asc" {{#ifCond selected.sort '==' 'time-asc' }}selected{{/ifCond}}>Start Time ↑</option>
+        <option value="time-desc" {{#ifCond selected.sort '==' 'time-desc' }}selected{{/ifCond}}>Start Time ↓</option>
+        <option value="date-asc" {{#ifCond selected.sort '==' 'date-asc' }}selected{{/ifCond}}>Date ↑</option>
+        <option value="date-desc" {{#ifCond selected.sort '==' 'date-desc' }}selected{{/ifCond}}>Date ↓</option>
+        <option value="priority" {{#ifCond selected.sort '==' 'priority' }}selected{{/ifCond}}>Priority ↓</option>
+    </select>
+
+    <button type="submit">Apply Filters</button>
+</form>
+
+
+<table border="1" cellpadding="6">
+    <thead>
+        <tr>
+            <th>Task Name</th>
+            <th>Date</th>
+            <th>Property</th>
+            <th>Zone</th>
+            <th>Staff Assigned</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each tasks}}
+        <tr>
+            <td>{{this.taskName}}</td>
+            <td>{{this.date}}</td>
+            <td>
+                <a href="/properties/{{this.propertyId}}">
+                    {{this.property.name}}
+                </a>
+            </td>
+            <td>{{this.taskType}}</td>
+
+            <td>{{this.property.zone}}</td>
+            <td>
+                {{#each this.assignedStaff}}
+                <a href="/staff/{{this._id}}">{{this.name}}</a>{{#unless @last}}, {{/unless}}
+                {{/each}}
+            </td>
+            <td><a href="/tasks/{{this._id}}">View</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

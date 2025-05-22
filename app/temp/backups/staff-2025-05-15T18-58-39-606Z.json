@@ -1,0 +1,2001 @@
+[
+  {
+    "_id": "68262ed72ca3f8c9ea493a32",
+    "opertoId": "1608",
+    "name": "Heidi Larocque",
+    "email": "Heidi@jaynescottages.com",
+    "phone": "7052051168",
+    "isActive": true,
+    "createDate": "2018-11-29T05:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.135Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed72ca3f8c9ea493a34",
+    "opertoId": "1609",
+    "name": "Rachel Inch",
+    "email": "rachel@jaynescottages.com",
+    "phone": "7052053745",
+    "isActive": true,
+    "createDate": "2018-11-29T05:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.135Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed72ca3f8c9ea493a36",
+    "opertoId": "1833",
+    "name": "Judith",
+    "email": "tubana.j@yahoo.com",
+    "phone": "647 896 7482",
+    "isActive": true,
+    "createDate": "2019-01-03T05:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "Team11",
+      "teamRole": "Team Member",
+      "members": [
+        "68262ed72ca3f8c9ea493a36",
+        "68262edc2ca3f8c9ea493aa8"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.135Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed72ca3f8c9ea493a38",
+    "opertoId": "1836",
+    "name": "*Mike",
+    "email": "mikedanieljan@gmail.com",
+    "phone": "6476850489",
+    "isActive": true,
+    "createDate": "2019-01-03T05:00:00.000Z",
+    "roles": [
+      "Driver",
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "Team7",
+      "teamRole": "Team Member",
+      "members": [
+        "68262ed72ca3f8c9ea493a38"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.135Z"
+    },
+    "vehicle": "Van",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed72ca3f8c9ea493a3a",
+    "opertoId": "1895",
+    "name": "Jayne McCaw",
+    "email": "jayne@jaynescottages.com",
+    "phone": "4162585168",
+    "isActive": true,
+    "createDate": "2019-01-15T05:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.135Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed82ca3f8c9ea493a3c",
+    "opertoId": "1896",
+    "name": "Jan Pitman",
+    "email": "Jan@jaynescottages.com",
+    "phone": "7053501088",
+    "isActive": true,
+    "createDate": "2019-01-15T05:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.135Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed82ca3f8c9ea493a3e",
+    "opertoId": "2925",
+    "name": "Josie Baldermor",
+    "email": "josiline.baldermor@gmail.com",
+    "phone": "4168936446",
+    "isActive": true,
+    "createDate": "2019-05-08T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.135Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed82ca3f8c9ea493a40",
+    "opertoId": "2927",
+    "name": "Noreen Barbosa",
+    "email": "aldreenbarbosa098@gmail.com",
+    "phone": "6478771676",
+    "isActive": true,
+    "createDate": "2019-05-08T04:00:00.000Z",
+    "roles": [
+      "Cleaner",
+      "Team Leader"
+    ],
+    "teamInfo": {
+      "teamID": "Team6",
+      "teamRole": "Team Leader",
+      "members": [
+        "68262ed82ca3f8c9ea493a40",
+        "68262edb2ca3f8c9ea493a9a"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.135Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed82ca3f8c9ea493a42",
+    "opertoId": "2984",
+    "name": "Concierge Staff",
+    "email": "Concierge@jaynescottages.com",
+    "phone": "7057063979",
+    "isActive": true,
+    "createDate": "2019-05-14T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.135Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed82ca3f8c9ea493a44",
+    "opertoId": "3148",
+    "name": "Jen",
+    "email": "No email provided",
+    "phone": "6475505704",
+    "isActive": true,
+    "createDate": "2019-05-31T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.135Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed82ca3f8c9ea493a46",
+    "opertoId": "3149",
+    "name": "Imelda Reyes",
+    "email": "No email provided",
+    "phone": "6479296495",
+    "isActive": true,
+    "createDate": "2019-05-31T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "Team9",
+      "teamRole": "Team Member",
+      "members": [
+        "68262ed82ca3f8c9ea493a46",
+        "68262ed82ca3f8c9ea493a4a"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.135Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed82ca3f8c9ea493a48",
+    "opertoId": "3153",
+    "name": "Mimi",
+    "email": "Amelitanatividad@yahoo.com",
+    "phone": "4164547545",
+    "isActive": true,
+    "createDate": "2019-05-31T04:00:00.000Z",
+    "roles": [
+      "Cleaner",
+      "Team Leader"
+    ],
+    "teamInfo": {
+      "teamID": "Team5",
+      "teamRole": "Team Leader",
+      "members": [
+        "68262ed82ca3f8c9ea493a48",
+        "68262edc2ca3f8c9ea493aa2"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed82ca3f8c9ea493a4a",
+    "opertoId": "3154",
+    "name": "Vanessa Mesa",
+    "email": "No email provided",
+    "phone": "6475729700",
+    "isActive": true,
+    "createDate": "2019-05-31T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "Team9",
+      "teamRole": "Team Member",
+      "members": [
+        "68262ed82ca3f8c9ea493a46",
+        "68262ed82ca3f8c9ea493a4a"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed82ca3f8c9ea493a4c",
+    "opertoId": "3236",
+    "name": "Lilibeth Tesoro",
+    "email": "No email provided",
+    "phone": "6479877153",
+    "isActive": true,
+    "createDate": "2019-06-07T04:00:00.000Z",
+    "roles": [
+      "Cleaner",
+      "Team Leader"
+    ],
+    "teamInfo": {
+      "teamID": "Team3",
+      "teamRole": "Team Leader",
+      "members": [
+        "68262ed82ca3f8c9ea493a4c",
+        "68262edb2ca3f8c9ea493a96"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed82ca3f8c9ea493a4e",
+    "opertoId": "3237",
+    "name": "Rohan",
+    "email": "No email provided",
+    "phone": "6475505763",
+    "isActive": true,
+    "createDate": "2019-06-07T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "Team2",
+      "teamRole": "Team Member",
+      "members": [
+        "68262ed82ca3f8c9ea493a4e",
+        "68262ed92ca3f8c9ea493a68"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [
+      "68262ed82ca3f8c9ea493a54"
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed82ca3f8c9ea493a50",
+    "opertoId": "5845",
+    "name": "*Roland",
+    "email": "No email provided",
+    "phone": "4372174602",
+    "isActive": true,
+    "createDate": "2020-05-27T04:00:00.000Z",
+    "roles": [
+      "Driver",
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "Team8",
+      "teamRole": "Team Member",
+      "members": [
+        "68262ed82ca3f8c9ea493a50",
+        "68262edc2ca3f8c9ea493aae"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "Truck",
+    "cantWorkWith": [
+      "68262ed82ca3f8c9ea493a54"
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed82ca3f8c9ea493a52",
+    "opertoId": "6037",
+    "name": "Tina Richards",
+    "email": "tina@jaynescottages.com",
+    "phone": "5199922160",
+    "isActive": true,
+    "createDate": "2020-06-11T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed82ca3f8c9ea493a54",
+    "opertoId": "6083",
+    "name": "*Alicia Barajas",
+    "email": "No email provided",
+    "phone": "7058960035",
+    "isActive": true,
+    "createDate": "2020-06-15T04:00:00.000Z",
+    "roles": [
+      "Driver",
+      "Cleaner",
+      "Team Leader"
+    ],
+    "teamInfo": {
+      "teamID": "Team1",
+      "teamRole": "Team Leader",
+      "members": [
+        "68262ed82ca3f8c9ea493a54"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "Van",
+    "cantWorkWith": [
+      "68262ed82ca3f8c9ea493a4e",
+      "68262ed82ca3f8c9ea493a50",
+      "68262eda2ca3f8c9ea493a82"
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed92ca3f8c9ea493a56",
+    "opertoId": "6151",
+    "name": "*Mike Briant",
+    "email": "No email provided",
+    "phone": "4168043492",
+    "isActive": true,
+    "createDate": "2020-06-19T04:00:00.000Z",
+    "roles": [
+      "Driver",
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed92ca3f8c9ea493a58",
+    "opertoId": "6319",
+    "name": "Customer Services",
+    "email": "customerservice@jaynescottages.com",
+    "phone": "4169856725",
+    "isActive": true,
+    "createDate": "2020-07-02T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed92ca3f8c9ea493a5a",
+    "opertoId": "6743",
+    "name": "Geoff Gilbert",
+    "email": "gjm.gilbert@gmail.com",
+    "phone": "6472012024",
+    "isActive": true,
+    "createDate": "2020-08-06T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed92ca3f8c9ea493a5c",
+    "opertoId": "7527",
+    "name": "Domestic Divas",
+    "email": "daniellejenkins@domesticdivas.org",
+    "phone": "5192784213",
+    "isActive": true,
+    "createDate": "2020-10-28T04:00:00.000Z",
+    "roles": [
+      "Cleaner",
+      "ThirdParty"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed92ca3f8c9ea493a5e",
+    "opertoId": "7769",
+    "name": "Margot Nimmo",
+    "email": "margot@jaynescottages.com",
+    "phone": "4163207048",
+    "isActive": true,
+    "createDate": "2020-11-19T05:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed92ca3f8c9ea493a60",
+    "opertoId": "10459",
+    "name": "Cindy Kitchener",
+    "email": "cindykitchener@gmail.com",
+    "phone": "7052053728",
+    "isActive": true,
+    "createDate": "2021-06-03T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed92ca3f8c9ea493a62",
+    "opertoId": "11272",
+    "name": "Ricardo",
+    "email": "No email provided",
+    "phone": "6473551045",
+    "isActive": true,
+    "createDate": "2021-07-20T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed92ca3f8c9ea493a64",
+    "opertoId": "13230",
+    "name": "Support",
+    "email": "support@jaynescottages.com",
+    "phone": "",
+    "isActive": true,
+    "createDate": "2021-10-29T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed92ca3f8c9ea493a66",
+    "opertoId": "14220",
+    "name": "Kami Harris",
+    "email": "linens@jaynesluxuryrentals.com",
+    "phone": "7057064525",
+    "isActive": true,
+    "createDate": "2021-12-16T05:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed92ca3f8c9ea493a68",
+    "opertoId": "16727",
+    "name": "*Jessica Moseley",
+    "email": "jess@jaynesluxuryrentals.com",
+    "phone": "7052059536",
+    "isActive": true,
+    "createDate": "2022-04-13T04:00:00.000Z",
+    "roles": [
+      "Driver",
+      "Cleaner",
+      "Team Leader"
+    ],
+    "teamInfo": {
+      "teamID": "Team2",
+      "teamRole": "Team Leader",
+      "members": [
+        "68262ed82ca3f8c9ea493a4e",
+        "68262ed92ca3f8c9ea493a68"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "Truck",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed92ca3f8c9ea493a6a",
+    "opertoId": "17662",
+    "name": "Kim Neuendorff",
+    "email": "kim@jaynescottages.com",
+    "phone": "4165248416",
+    "isActive": true,
+    "createDate": "2022-05-20T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed92ca3f8c9ea493a6c",
+    "opertoId": "17736",
+    "name": "Rob Rogers",
+    "email": "jascol@hotmail.com",
+    "phone": "6478626855",
+    "isActive": true,
+    "createDate": "2022-05-24T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262ed92ca3f8c9ea493a6e",
+    "opertoId": "17925",
+    "name": "Joaquin De Leon",
+    "email": "No email provided",
+    "phone": "6477032895",
+    "isActive": true,
+    "createDate": "2022-06-01T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "Team4",
+      "teamRole": "Team Member",
+      "members": [
+        "68262ed92ca3f8c9ea493a6e",
+        "68262edb2ca3f8c9ea493a98"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262eda2ca3f8c9ea493a70",
+    "opertoId": "19491",
+    "name": "Vavavabroom Cleaning",
+    "email": "No email provided",
+    "phone": "9059994992",
+    "isActive": true,
+    "createDate": "2022-08-01T04:00:00.000Z",
+    "roles": [
+      "Cleaner",
+      "ThirdParty"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262eda2ca3f8c9ea493a72",
+    "opertoId": "24567",
+    "name": "Preet",
+    "email": "pbrar@everestcomputing.ca",
+    "phone": "",
+    "isActive": true,
+    "createDate": "2023-03-30T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262eda2ca3f8c9ea493a74",
+    "opertoId": "24646",
+    "name": "Shelly Witney",
+    "email": "shelly@jaynescottages.com",
+    "phone": "7057838411",
+    "isActive": true,
+    "createDate": "2023-04-03T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262eda2ca3f8c9ea493a76",
+    "opertoId": "25659",
+    "name": "SMF Home Services (Sue)",
+    "email": "sue@smfhome.com",
+    "phone": "6478245734",
+    "isActive": true,
+    "createDate": "2023-05-09T04:00:00.000Z",
+    "roles": [
+      "Cleaner",
+      "ThirdParty"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262eda2ca3f8c9ea493a78",
+    "opertoId": "25842",
+    "name": "Cherie Biro",
+    "email": "cherie@jaynescottages.com",
+    "phone": "7056412129",
+    "isActive": true,
+    "createDate": "2023-05-15T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262eda2ca3f8c9ea493a7a",
+    "opertoId": "26205",
+    "name": "Owen Carey-Griffin",
+    "email": "owencareygriffin@gmail.com",
+    "phone": "4168011265",
+    "isActive": true,
+    "createDate": "2023-05-27T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262eda2ca3f8c9ea493a7c",
+    "opertoId": "26281",
+    "name": "Ashi",
+    "email": "ashi@jaynescottages.com",
+    "phone": "4374316283",
+    "isActive": true,
+    "createDate": "2023-05-30T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262eda2ca3f8c9ea493a7e",
+    "opertoId": "26780",
+    "name": "Claire",
+    "email": "claire@jaynescottages.com",
+    "phone": "6472873483",
+    "isActive": true,
+    "createDate": "2023-06-15T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262eda2ca3f8c9ea493a80",
+    "opertoId": "27518",
+    "name": "Marisa Blanza",
+    "email": "No email provided",
+    "phone": "4164718841",
+    "isActive": true,
+    "createDate": "2023-07-09T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262eda2ca3f8c9ea493a82",
+    "opertoId": "27749",
+    "name": "Lee Ann Autentico",
+    "email": "No email provided",
+    "phone": "6478645749",
+    "isActive": true,
+    "createDate": "2023-07-17T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "Team14",
+      "teamRole": "Team Member",
+      "members": [
+        "68262eda2ca3f8c9ea493a82",
+        "68262edc2ca3f8c9ea493aaa"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [
+      "68262ed82ca3f8c9ea493a54"
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "68262eda2ca3f8c9ea493a84",
+    "opertoId": "27810",
+    "name": "Liezil",
+    "email": "No email provided",
+    "phone": "6478640423",
+    "isActive": true,
+    "createDate": "2023-07-19T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262eda2ca3f8c9ea493a86",
+    "opertoId": "34330",
+    "name": "Jennifer Lyndsay",
+    "email": "No email provided",
+    "phone": "",
+    "isActive": true,
+    "createDate": "2024-04-26T04:00:00.000Z",
+    "roles": [
+      "Cleaner",
+      "ThirdParty"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edb2ca3f8c9ea493a88",
+    "opertoId": "34530",
+    "name": "Winnie",
+    "email": "winniemhaytubana20@gmail.com",
+    "phone": "2499901664",
+    "isActive": true,
+    "createDate": "2024-05-06T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "Team12",
+      "teamRole": "Team Member",
+      "members": [
+        "68262edb2ca3f8c9ea493a88",
+        "68262edb2ca3f8c9ea493a9e"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edb2ca3f8c9ea493a8a",
+    "opertoId": "34618",
+    "name": "George Regala",
+    "email": "No email provided",
+    "phone": "6479159914",
+    "isActive": true,
+    "createDate": "2024-05-08T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "Team15",
+      "teamRole": "Team Member",
+      "members": [
+        "68262edb2ca3f8c9ea493a8a"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edb2ca3f8c9ea493a8c",
+    "opertoId": "34619",
+    "name": "Loremel",
+    "email": "No email provided",
+    "phone": "6479790614",
+    "isActive": true,
+    "createDate": "2024-05-08T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "Team10",
+      "teamRole": "Team Member",
+      "members": [
+        "68262edb2ca3f8c9ea493a8c",
+        "68262edc2ca3f8c9ea493aa6"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.136Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edb2ca3f8c9ea493a8e",
+    "opertoId": "34710",
+    "name": "Micaela",
+    "email": "villas@jaynescottages.com",
+    "phone": "",
+    "isActive": true,
+    "createDate": "2024-05-13T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edb2ca3f8c9ea493a90",
+    "opertoId": "34746",
+    "name": "Emilito",
+    "email": "No email provided",
+    "phone": "4168776048",
+    "isActive": true,
+    "createDate": "2024-05-14T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edb2ca3f8c9ea493a92",
+    "opertoId": "34963",
+    "name": "Ben",
+    "email": "ben@jaynescottages.com",
+    "phone": "5198318876",
+    "isActive": true,
+    "createDate": "2024-05-22T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edb2ca3f8c9ea493a94",
+    "opertoId": "35432",
+    "name": "John",
+    "email": "No email provided",
+    "phone": "4379337107",
+    "isActive": true,
+    "createDate": "2024-06-05T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "Team13",
+      "teamRole": "Team Member",
+      "members": [
+        "68262edc2ca3f8c9ea493ab2",
+        "68262edb2ca3f8c9ea493a94"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edb2ca3f8c9ea493a96",
+    "opertoId": "35740",
+    "name": "*Paul",
+    "email": "No email provided",
+    "phone": "4377337539",
+    "isActive": true,
+    "createDate": "2024-06-17T04:00:00.000Z",
+    "roles": [
+      "Driver",
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "Team3",
+      "teamRole": "Team Member",
+      "members": [
+        "68262ed82ca3f8c9ea493a4c",
+        "68262edb2ca3f8c9ea493a96"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "Escape",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edb2ca3f8c9ea493a98",
+    "opertoId": "36143",
+    "name": "Ethel",
+    "email": "No email provided",
+    "phone": "6476863974",
+    "isActive": true,
+    "createDate": "2024-07-01T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "Team4",
+      "teamRole": "Team Member",
+      "members": [
+        "68262ed92ca3f8c9ea493a6e",
+        "68262edb2ca3f8c9ea493a98"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edb2ca3f8c9ea493a9a",
+    "opertoId": "36406",
+    "name": "Kyle",
+    "email": "No email provided",
+    "phone": "6476744875",
+    "isActive": true,
+    "createDate": "2024-07-12T04:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "Team6",
+      "teamRole": "Team Member",
+      "members": [
+        "68262ed82ca3f8c9ea493a40",
+        "68262edb2ca3f8c9ea493a9a"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edb2ca3f8c9ea493a9c",
+    "opertoId": "39756",
+    "name": "Rashi Sood",
+    "email": "rashisood1@cognaonline.com",
+    "phone": "9059243368",
+    "isActive": true,
+    "createDate": "2024-12-09T05:00:00.000Z",
+    "roles": [
+      "Cleaner"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edb2ca3f8c9ea493a9e",
+    "opertoId": "42022",
+    "name": "Arvie Galvez",
+    "email": "No email provided",
+    "phone": "7059712667",
+    "isActive": true,
+    "createDate": "2025-03-25T04:00:00.000Z",
+    "roles": [
+      "Cleaner",
+      "Newbie"
+    ],
+    "teamInfo": {
+      "teamID": "Team12",
+      "teamRole": "Team Member",
+      "members": [
+        "68262edb2ca3f8c9ea493a88",
+        "68262edb2ca3f8c9ea493a9e"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edb2ca3f8c9ea493aa0",
+    "opertoId": "42025",
+    "name": "Mira",
+    "email": "No email provided",
+    "phone": "4377664209",
+    "isActive": true,
+    "createDate": "2025-03-25T04:00:00.000Z",
+    "roles": [
+      "Cleaner",
+      "Newbie"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edc2ca3f8c9ea493aa2",
+    "opertoId": "42026",
+    "name": "Jose Morales Jr",
+    "email": "No email provided",
+    "phone": "647 893 3392",
+    "isActive": true,
+    "createDate": "2025-03-25T04:00:00.000Z",
+    "roles": [
+      "Cleaner",
+      "Newbie"
+    ],
+    "teamInfo": {
+      "teamID": "Team5",
+      "teamRole": "Team Member",
+      "members": [
+        "68262ed82ca3f8c9ea493a48",
+        "68262edc2ca3f8c9ea493aa2"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edc2ca3f8c9ea493aa4",
+    "opertoId": "42053",
+    "name": "Jade Guillermo",
+    "email": "reservations@jaynesluxuryrentals.com",
+    "phone": "6475095080",
+    "isActive": true,
+    "createDate": "2025-03-26T04:00:00.000Z",
+    "roles": [
+      "Cleaner",
+      "Newbie"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edc2ca3f8c9ea493aa6",
+    "opertoId": "42310",
+    "name": "Joey Oandasan",
+    "email": "joey_oandasan@yahoo.com",
+    "phone": "4378683833",
+    "isActive": true,
+    "createDate": "2025-04-07T04:00:00.000Z",
+    "roles": [
+      "Cleaner",
+      "Newbie"
+    ],
+    "teamInfo": {
+      "teamID": "Team10",
+      "teamRole": "Team Member",
+      "members": [
+        "68262edb2ca3f8c9ea493a8c",
+        "68262edc2ca3f8c9ea493aa6"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edc2ca3f8c9ea493aa8",
+    "opertoId": "42312",
+    "name": "Arnel Ugo Villalba",
+    "email": "arnelv106@gmail.com",
+    "phone": "14372610198",
+    "isActive": true,
+    "createDate": "2025-04-07T04:00:00.000Z",
+    "roles": [
+      "Cleaner",
+      "Newbie"
+    ],
+    "teamInfo": {
+      "teamID": "Team11",
+      "teamRole": "Team Member",
+      "members": [
+        "68262ed72ca3f8c9ea493a36",
+        "68262edc2ca3f8c9ea493aa8"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edc2ca3f8c9ea493aaa",
+    "opertoId": "42313",
+    "name": "Christian Ibarra",
+    "email": "anthony01christian@gmail.com",
+    "phone": "6476170485",
+    "isActive": true,
+    "createDate": "2025-04-07T04:00:00.000Z",
+    "roles": [
+      "Cleaner",
+      "Newbie"
+    ],
+    "teamInfo": {
+      "teamID": "Team14",
+      "teamRole": "Team Member",
+      "members": [
+        "68262eda2ca3f8c9ea493a82",
+        "68262edc2ca3f8c9ea493aaa"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edc2ca3f8c9ea493aac",
+    "opertoId": "42341",
+    "name": "Xioaly Alvarez",
+    "email": "No email provided",
+    "phone": "7058162586",
+    "isActive": true,
+    "createDate": "2025-04-07T04:00:00.000Z",
+    "roles": [
+      "Cleaner",
+      "Newbie"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edc2ca3f8c9ea493aae",
+    "opertoId": "42364",
+    "name": "Lorena Bersamina",
+    "email": "No email provided",
+    "phone": "7059896448",
+    "isActive": true,
+    "createDate": "2025-04-08T04:00:00.000Z",
+    "roles": [
+      "Cleaner",
+      "Newbie"
+    ],
+    "teamInfo": {
+      "teamID": "Team8",
+      "teamRole": "Team Member",
+      "members": [
+        "68262ed82ca3f8c9ea493a50",
+        "68262edc2ca3f8c9ea493aae"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edc2ca3f8c9ea493ab0",
+    "opertoId": "42442",
+    "name": "Rizzah Kaye",
+    "email": "kaye.morales07@gmail.com",
+    "phone": "6476498358",
+    "isActive": true,
+    "createDate": "2025-04-10T04:00:00.000Z",
+    "roles": [
+      "Cleaner",
+      "Newbie"
+    ],
+    "teamInfo": {
+      "teamID": "General",
+      "teamRole": "Team Member",
+      "members": [],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  },
+  {
+    "_id": "68262edc2ca3f8c9ea493ab2",
+    "opertoId": "42692",
+    "name": "Flor",
+    "email": "No email provided",
+    "phone": "6477451870",
+    "isActive": true,
+    "createDate": "2025-04-21T04:00:00.000Z",
+    "roles": [
+      "Cleaner",
+      "Newbie"
+    ],
+    "teamInfo": {
+      "teamID": "Team13",
+      "teamRole": "Team Member",
+      "members": [
+        "68262edc2ca3f8c9ea493ab2",
+        "68262edb2ca3f8c9ea493a94"
+      ],
+      "zone": "Unknown"
+    },
+    "schedule": {
+      "shifts": [],
+      "changes": []
+    },
+    "additionalInfo": {
+      "comments": "",
+      "lastModified": "2025-05-15T18:13:40.137Z"
+    },
+    "vehicle": "None",
+    "cantWorkWith": [],
+    "__v": 0
+  }
+]
