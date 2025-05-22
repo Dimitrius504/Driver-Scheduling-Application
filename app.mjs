@@ -167,12 +167,12 @@ hbs.registerHelper('pickupTaskName', function (taskName) {
 });
 
 hbs.registerHelper('isDropoffTask', function (task) {
-  if (!task) return false;
+    if (!task) return false;
 
-  const isPickup = task.taskName?.toLowerCase().includes('pickup');
-  const hasStaff = Array.isArray(task.assignedStaff) && task.assignedStaff.length > 0;
+    const isPickup = task.taskName?.toLowerCase().includes('pickup');
+    const hasStaff = Array.isArray(task.assignedStaff) && task.assignedStaff.length > 0;
 
-  return !isPickup && hasStaff;
+    return !isPickup && hasStaff;
 });
 
 hbs.registerHelper('or', function (a, b) {
@@ -191,7 +191,15 @@ app.use('/operto', opertoRoutes);
 
 const uri = `${process.env.MONGO_URI}`
 
-await mongoose.connect(uri, {});
+await mongoose.connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    ssl: true,
+    tlsAllowInvalidCertificates: false,
+    tlsInsecure: false,
+    tls: true,
+    minVersion: 'TLSv1.2',
+});
 
 console.log('Connected to database:', mongoose.connection.name);
 
