@@ -51,6 +51,8 @@ async function main() {
   }
 
   // ==================== TASKS ====================
+
+  // NOTE: RACHEL MENTIONED IGNORE CONCIERGE TASKS
   try {
     console.log('📦 Fetching tasks...');
     const startDate = '2025-05-19';

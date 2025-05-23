@@ -8,6 +8,7 @@ import ExcelJS from 'exceljs';
 import { Document, Packer, Paragraph, TextRun, HeadingLevel, PageBreak } from 'docx';
 import archiver from 'archiver';
 
+import mongoose from 'mongoose';
 
 import { haversineDistance } from '../database/middleware/driverAssignment/utils.mjs';
 const router = express.Router();
@@ -781,6 +782,7 @@ router.post('/update-or-delete-task', async (req, res) => {
     if (Array.isArray(scheduleId)) scheduleId = scheduleId[0];
     if (scheduleId.includes(',')) scheduleId = scheduleId.split(',')[0];
 
+    console.log(driverId)
     try {
         if (action === 'delete') {
             // Delete task and remove from schedule
@@ -795,7 +797,7 @@ router.post('/update-or-delete-task', async (req, res) => {
             const updateFields = {
                 assignedDriver: driverId || null,
                 startTime,
-                driverAssignmentReason: reason || null,
+                assignedDriver: driverId ? new mongoose.Types.ObjectId(driverId) : null,
                 assignedStaff
             };
 
@@ -804,10 +806,20 @@ router.post('/update-or-delete-task', async (req, res) => {
             if (requiresLinens !== undefined) updateFields.requiresLinens = requiresLinens === 'true';
             if (requiresSupplies !== undefined) updateFields.requiresSupplies = requiresSupplies === 'true';
 
-            await Tasks.updateOne(
-                { _id: taskId },
-                { $set: updateFields }
-            );
+            const objectIdDriver = driverId ? new mongoose.Types.ObjectId(driverId) : null;
+
+            await Promise.all([
+                Tasks.updateOne(
+                    { _id: taskId },
+                    { $set: updateFields }
+                ),
+                Schedules.updateOne(
+                    { _id: scheduleId, 'daySchedules.assignments.taskId': taskId },
+                    { $set: { 'daySchedules.$[].assignments.$[elem].driverId': objectIdDriver } },
+                    { arrayFilters: [{ 'elem.taskId': taskId }] }
+                )
+            ]);
+
 
             console.log(`Saved task ${taskId}`, updateFields);
         }

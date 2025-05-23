@@ -94,6 +94,9 @@ export const ignoreTasksWithStaff = new Set([
     'Ashi',
     'Bawb (Bob) Kitchener',
     'Cindy Kitchener',
+    'Vavavabroom Cleaning',
+    'Domestic Divas',
+    'Wishes Concierge'
 ]);
 
 export const ignoreTaskType = new Set([
@@ -102,5 +105,10 @@ export const ignoreTaskType = new Set([
     'Email/Text Guest for Day After Arrival Checkup',
     'Greetings',
     'Greeting',
-    'Zone H Garbage Day'	
+    'Zone H Garbage Day',
+    'Zone C Garbage Day',
+    'Zone D Garbage Day',
+    'Zone E Garbage Day',
+    'Zone G Garbage Day',
+    'Zone C Garbage Day'
 ]);

@@ -67,20 +67,24 @@
 
     <tbody>
       {{#each this.assignments}}
-      <tr
-        style="{{#if (conflictsForTask ../../schedule.conflicts (toString this.taskId))}}background-color: #ffdddd;{{/if}}">
-        <form method="POST" action="/schedule/update-or-delete-task">
-          <input type="hidden" name="taskId" value="{{this.taskId}}">
-          <input type="hidden" name="scheduleId" value="{{../../schedule._id}}">
 
+      <form method="POST" action="/schedule/update-or-delete-task">
+        <input type="hidden" name="taskId" value="{{this.taskId}}">
+        <input type="hidden" name="scheduleId" value="{{../../schedule._id}}">
+
+        <tr
+          style="{{#if (conflictsForTask ../../schedule.conflicts (toString this.taskId))}}background-color: #ffdddd;{{/if}}">
           <td>
-            <select name="driverId">
+            <select name="driverId" onchange="this.form.submit()">
               {{#each ../../schedule.staff}}
-              <option value="{{this._id}}" {{#if (eq (toString this._id) ../driverId)}}selected{{/if}}>{{this.name}}
+              <option value="{{this._id}}" {{#if (eq (toString this._id) ../driverId)}}selected{{/if}}>
+                {{this.name}}
               </option>
               {{/each}}
             </select>
           </td>
+
+
 
 
 
@@ -157,8 +161,9 @@
             <button type="submit" name="action" value="delete" style="background: #dc3545; color: white;"
               onclick="return confirm('Are you sure you want to delete this task?');">Delete</button>
           </td>
-        </form>
-      </tr>
+        </tr>
+
+      </form>
       {{/each}}
     </tbody>
 
